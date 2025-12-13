@@ -95,10 +95,10 @@ const Header = () => {
                             </button>
                         </div>
 
-                        <div className="w-[70%] md:w-[40%] xl:w-[60%]">
+                        <div className="w-[90%] md:w-[40%] xl:w-[60%]">
                             <Link href="/" id="home-link" className="flex items-center justify-start md:justify-center">
                                 <Image
-                                    className="max-w-[164px]"
+                                    className="max-w-[250px]"
                                     src={Logo.src}
                                     width={Logo.width}
                                     height={Logo.height}
