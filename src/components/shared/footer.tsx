@@ -63,7 +63,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <span><FaEnvelope /></span>
-                                <Link href="mailto:info@yummiyaam.com">info@yummiyaam.com</Link>
+                                <Link href="mailto:info@yummiyaam.com">info@Champaran001.com</Link>
                             </li>
                             <li>
                                 <span><FaStreetView /></span>
@@ -76,7 +76,7 @@ const Footer = () => {
                 <div className="d2c_copyright">
                     <div className="col-start-1 text-center md:text-left col-span-12 md:col-span-7">
                         <p className="text-[#757575]">
-                            Copyright © DesignToCodes. All Right Reserved
+                            Copyright © Naman. All Right Reserved
                         </p>
                     </div>
                     <div className="col-start-1 md:col-start-8 col-span-12 md:col-span-5">
