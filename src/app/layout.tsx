@@ -28,19 +28,19 @@ const gwendolyn = Gwendolyn({
 export const metadata: Metadata = {
   robots: "noindex, nofollow",
   icons: {
-    icon: Favicon.src
+    icon: Favicon.src,
   },
   openGraph: {
-    title: "YummiYaam - Premium Restaurant Next.js Template",
-    description: "Restaurant Next.js Website Template- Discover YummiYaam - Premium Restaurant Next.js Template built for modern dining experiences. Purchase now!",
+    title: "Champaran | जहाँ हर निवाला Feels Like Home",
+    description: "जहाँ हर निवाला Feels Like Home",
     images: [
       {
         url: "https://designtocodes.com/wp-content/uploads/2025/05/YummiYaam-Premium-Restaurant-Nextjs-Template.jpg",
       },
     ],
   },
-  title: "YummiYaam - Premium Restaurant Next.js Template",
-  description: "Restaurant Next.js Website Template- Discover YummiYaam - Premium Restaurant Next.js Template built for modern dining experiences. Purchase now!"
+  title: "Champaran | जहाँ हर निवाला Feels Like Home",
+  description: "Best Matka Mutton & Matka Chicken Near You",
 };
 
 export default function RootLayout({
