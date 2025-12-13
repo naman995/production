@@ -44,9 +44,8 @@ const About = () => {
               About <span>us</span>
             </h2>
             <p>
-              YummiYaam is a restaurant by The Black Sea. It&apos;s a unique
-              place with a special ambience, an exquisite seafood cuisine and a
-              magnificent sea view.
+              Champaran brings you the authentic flavors of Champaran mutton and
+              chicken, inspired by the rich culinary heritage of Bihar.
             </p>
             <div>
               <div className="flex items-center gap-3 mb-3">
@@ -61,9 +60,9 @@ const About = () => {
                 <h4 className="d2c_subtitle">Goals</h4>
               </div>
               <p>
-                Highlight the sophistication of the restaurant, convey the
-                atmosphere of the restaurant on the website as much as possible,
-                create a modern user-friendly interface
+                Since 2014, our journey has focused on preserving traditional
+                recipes and slow coal-cooking techniques passed down through
+                generations.
               </p>
             </div>
 
@@ -80,13 +79,18 @@ const About = () => {
                 <h4 className="d2c_subtitle">Solutions</h4>
               </div>
               <p>
-                To conduct an analysis of competitors and target audience. To
-                build a convenient and understandable navigation the website. To
-                make a convenient and presentable menu page, possibility to book
+                From our signature Matka Mutton &amp; Chicken to eco‑friendly
+                clay pots and leaf plates, we aim to make every meal a memorable
+                experience for everyone.
               </p>
             </div>
 
-            <Link href="#d2c_book" className="d2c_btn">
+            <Link
+              href="https://wa.me/8882246241?text=Hi%20I%20want%20to%20know%20about%20franchise"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="d2c_btn"
+            >
               {" "}
               Become a Franchise Partner{" "}
             </Link>
