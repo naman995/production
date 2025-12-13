@@ -124,7 +124,7 @@ const Header = () => {
                 }}
                 className={`pt-28 pb-14 bg-cover bg-center ${isNavOpen ? 'show' : ''}`}
             >
-                <div className="block p-6 pt-4 w-full">
+                <div className="block p-6 pt-16 lg:pt-4 w-full">
                     {/* Mobile Navigation Links */}
                     <div
                         id="mobile-nav-links"

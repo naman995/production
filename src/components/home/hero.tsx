@@ -7,15 +7,14 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   FaFacebookF,
-  FaLinkedinIn,
-  FaTwitter,
-  FaYoutube,
   FaBurger,
   FaChair,
   FaFaceSmile,
   FaAward,
   FaGlobe,
   FaUser,
+  FaWhatsapp,
+  FaInstagram,
 } from "react-icons/fa6";
 import heroSteakImage from "@/assets/images/hero-steak-image.jpg";
 import bottomLeftStar from "@/assets/images/bottom-left-star-with-border.png";
@@ -77,7 +76,12 @@ const Hero = () => {
             <h1 className="d2c_title text-5xl md:text-[55px] lg:text-7xl xl:text-8xl 2xl:text-[120px] leading-[1.2] md:leading-[1.1] before:hidden md:before:block">
               Delicious <span className="pl-0 md:pl-10">Moments</span> Await
             </h1>
-            <Link href="#d2c_book" className="d2c_btn">
+            <Link
+              href="https://wa.me/8882246241?text=Hi%20I%20want%20to%20know%20about%20franchise"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="d2c_btn"
+            >
               {" "}
               Become a Franchise Partner{" "}
             </Link>
@@ -89,14 +93,15 @@ const Hero = () => {
                 <Link href="#">
                   <FaFacebookF />
                 </Link>
-                <Link href="#">
-                  <FaLinkedinIn />
+                <Link
+                  href="https://wa.me/8882246241?text=Hi%20I%20want%20to%20know%20about%20franchise"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp />
                 </Link>
                 <Link href="#">
-                  <FaTwitter />
-                </Link>
-                <Link href="#">
-                  <FaYoutube />
+                  <FaInstagram />
                 </Link>
               </div>
             </div>
