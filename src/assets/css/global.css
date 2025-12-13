@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+@theme {
+    /* Global Font */
+    --font-primary: "Kalnia", serif;
+    --font-secondary: "Sora", serif;
+    --font-accent: "Gwendolyn", serif;
+
+    /* Global Colors */
+    --color-primary: #152A32;
+    --color-secondary: #F0EBD5;
+    --color-accent: #D1902F;
+
+    /* Font Size Style */
+    --text-base-1: 17px;
+    --text-base-1--line-height: 1.4;
+    --text-xl-1: 21px;
+    --text-xl-1--line-height: 1.2;
+    --text-2xl-1: 26px;
+    --text-2xl-1--line-height: 1.2;
+    --text-6xl-1: 65px;
+    --text-6xl-1--line-height: 1.2;
+}
+
+@layer base{
+    body{
+        @apply overflow-x-hidden relative font-primary;
+    }
+    html{
+        @apply scroll-smooth;
+    }
+    h1, h2,h3, h4, h5, h6{
+        @apply text-[var(--color-secondary)] capitalize font-primary mb-2;
+    }
+    p{
+        @apply text-secondary text-base lg:text-base-1 font-secondary font-light;
+    }
+    li{
+        @apply text-secondary xl:text-lg;
+    }
+    ::selection{
+        @apply bg-secondary text-primary;
+    }
+    section {
+        @apply overflow-hidden pt-14 pb-0 xl:py-16 2xl:py-24 px-2 md:px-0;
+    }
+}
+
+@layer components{
+    .container{
+        @apply mx-auto px-6 w-full md:!w-[720px] lg:!w-[960px] xl:!w-[1140px] 2xl:!w-[1296px];
+    }
+
+    .d2c_title{
+        @apply text-3xl md:text-5xl xl:text-6xl 2xl:text-6xl-1 text-secondary font-medium relative before:content-[''] before:w-6 before:h-6 lg:before:w-[36px] lg:before:h-[36px] 2xl:before:w-[40px] 2xl:before:h-[40px] before:bg-[url(../images/star-1.png)] before:bg-contain lg:before:-top-5 before:-left-6 before:absolute !inline-block;
+    }
+    .d2c_title span{
+        @apply text-accent;
+    }
+
+    .d2c_subtitle{
+        @apply text-3xl;
+    }
+
+    .d2c_btn{
+        @apply px-6 py-3 text-base lg:text-lg z-10 rounded border border-accent relative inline-block font-medium capitalize font-primary text-secondary hover:text-primary bg-transparent hover:bg-accent transition-all;
+    }
+
+    /* Section header */
+    .d2c_section_header{
+        @apply text-center mb-8 md:mb-12 lg:mb-16 xl:mb-20;
+    }
+
+    .form-control{
+        @apply py-4 bg-transparent focus:outline-none font-secondary font-light text-base-1 text-secondary w-full placeholder:text-[#757575] border-b border-b-[#314043];
+    }
+
+    /* nav css */
+    #navbar{
+        @apply z-40;
+    }
+    .d2c_navbar{
+        @apply border-none border-b border-[#d1902f1a] py-4 z-40 relative;
+    }
+    .d2c_navbar .d2c_btn{
+        @apply px-6 lg:px-10 py-2 lg:py-3;
+    }
+    .d2c_navigation .nav_link,#mobile-menu .nav_link{
+        @apply text-secondary inline-block text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-primary font-medium capitalize py-2 mb-0 relative hover:text-accent transition-all  before:content-[''] before:w-[44px] before:h-[44px] before:bg-[url(../images/star-1.png)] before:bg-contain before:-top-5 before:-left-5 before:absolute max-w-fit mx-auto before:opacity-0;
+    }
+    .nav_link.active{
+        @apply !text-accent before:opacity-100;
+    }
+    #mobile-menu-btn{
+        @apply border rounded-sm border-secondary bg-primary text-white p-1;
+    }
+
+    #mobile-menu {
+        @apply absolute top-0 left-0 w-full bg-white transform -translate-y-full transition-transform duration-500 ease-in-out min-h-screen;
+    }
+    #mobile-menu.show {
+        @apply translate-y-0;
+    }
+
+
+    /* Hero social link */
+    .d2c_social_link a {
+        @apply text-accent text-xs transition-all inline-flex w-7 h-7 items-center justify-center border border-dashed  border-accent;
+    }
+    
+    .d2c_social_link a:not(:hover) {
+        @apply text-secondary border-secondary;
+    }
+
+    .d2c_infinite p{
+        @apply inline-block border-r-primary border-r px-2 leading-none font-primary text-xl md:text-xl xl:text-[36px] font-normal text-accent;
+    }
+
+    .d2c_infinite{
+        @apply border-y border-dashed border-y-accent py-2 xl:py-4 !min-h-[50px] xl:!min-h-[80px] !flex !items-center;
+    }
+
+    /* Contact section */
+    .d2c_contact_details li{
+        @apply text-secondary text-base xl:text-lg font-secondary font-normal;
+    }
+    .d2c_contact_details li span{
+        @apply text-accent inline-block w-5 mr-1;
+    }
+    .d2c_map_wrapper{
+        @apply relative h-[400px] md:h-[500px] xl:h-[550px] order-2 lg:order-1 mt-10 md:mt-0 ;
+    }
+    #d2c_contact form{
+        @apply mt-6 w-full space-y-8 p-8 bg-accent rounded-lg border border-dashed border-[#2a3d43] bg-gradient-to-b from-[#152931] to-[#222b2f];
+    }
+
+    /* FAQ section */
+    .accordion-header{
+        @apply cursor-pointer transition flex justify-between p-5 items-start 2xl:items-center;
+    }
+    .accordion-header.active{
+        @apply border-transparent;
+    }
+    .accordion-content{
+        @apply overflow-hidden max-h-0 transition duration-300;
+    }
+    .accordion-content .d2c_answer{
+        @apply text-secondary text-sm md:text-base px-0 md:px-10 2xl:px-16 pb-5;
+    }
+    .accordion-header .d2c_subtitle{
+        @apply leading-none text-base md:text-2xl mb-0;
+    }
+    .accordion-header .d2c_subtitle{
+        @apply text-accent;
+    }
+
+    /* Main dishes */
+    #d2c_main_dishes .d2c_dishes_wrapper{
+        @apply overflow-hidden h-[350px] md:h-[550px] md:w-[20%] hover:w-[50%] relative transition-all duration-600;
+    }
+    #d2c_main_dishes .d2c_content_wrapper{
+        @apply p-5 bg-[rgba(21,42,50,0.75)] rounded-lg absolute -bottom-6 group-hover:bottom-0 w-full backdrop-blur-xs space-y-1 transition-all duration-400 opacity-0 group-hover:opacity-100;
+    }
+
+    /* chefs section */
+    #d2c_our_chef .d2c_chef_wrapper{
+        @apply relative h-[250px] md:h-[300px] lg:lg:h-[200px] 2xl:h-[352px];
+    }
+    .d2c_chef_quote{
+        @apply p-1 md:p-3 max-w-[250px] absolute -bottom-6 -left-6 z-20 border rounded border-dashed border-white;
+    }
+    .d2c_experience{
+        @apply p-1 md:p-3 max-w-[250px] absolute -top-6 -right-6 z-20 border rounded border-dashed border-white;
+    }
+
+    /* Menu section */
+    #d2c_our_menu .d2c_menu_content{
+        @apply p-3 xl:p-5 group-hover:pb-10 bg-[rgba(21,42,50,0.75)] rounded-lg absolute bottom-0 w-full backdrop-blur-xs space-y-1 transition-all duration-600 rounded-b-lg;
+    }
+    #d2c_our_menu .d2c_hover_content{
+        @apply text-accent opacity-0 group-hover:opacity-100 absolute !-bottom-5 group-hover:!bottom-4 transition-all duration-600;
+    }
+
+    /* Testimonial section */
+    .d2c_testimonial_slider .swiper-button-prev,
+    .d2c_testimonial_slider .swiper-button-next {
+        @apply !w-8 !h-8 flex items-center justify-center rounded cursor-pointer border !border-secondary border-dashed !top-[97%] after:hidden !text-white hover:!text-accent transition-all duration-600;
+    }
+    .d2c_testimonial_slider .swiper-button-prev{
+        @apply !left-0;
+    }
+    .d2c_testimonial_slider .swiper-button-next{
+        @apply !left-14;
+    }
+
+    /* Footer */
+    footer .d2c_contact_details li{
+        @apply  hover:text-accent font-light transition-all text-base xl:text-base-1;
+    }
+    footer .d2c_contact_details li span{
+        @apply text-secondary;
+    }
+    .d2c_footer_link{
+        @apply font-light hover:text-accent transition-all;
+    }
+    /* Copyright */
+    .d2c_copyright{
+        @apply grid grid-cols-12 gap-2 md:gap-6 border-t border-t-[#324044] py-4 border-dashed;
+    }
+    .d2c_copyright ul li a{
+        @apply text-sm lg:text-base text-[#757575] font-light font-secondary hover:text-accent transition-all;
+    }
+    .d2c_copyright p{
+        @apply text-xs md:text-sm lg:text-base;
+    }
+
+
+}
+@layer utilities{
+    /* call to action Background */
+    .cta_bg{
+        background: linear-gradient(to bottom, rgba(21, 41, 49, 0.75), rgba(34, 43, 47, 0.75)), url('../images/restaurants-view.jpg');
+    }
+    /* BAckground With Gradient ( Bottom Left  ) */
+    .bg-gradient-bl {
+        background: radial-gradient(at bottom left, #3e3e31 0%, #152A32 40%);
+    }
+    /* BAckground With Gradient ( Top Left  ) */
+    .bg-gradient-tl {
+        background: radial-gradient(at top left, #3e3e31 0%, #152A32 40%);
+    }
+    /* BAckground With Gradient ( Bottom Right  ) */
+    .bg-gradient-br {
+        background: radial-gradient(at bottom right, #3e3e31 0%, #152A32 40%);
+    }
+    /* BAckground With Gradient ( Top Right  ) */
+    .bg-gradient-tr {
+        background: radial-gradient(at top right, #3e3e31 0%, #152A32 40%);
+    }
+    /* Accordion Animation */
+    .accordion-content {
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+    }
+
+    /* Preloader */
+    .preloader{
+        @apply h-full fixed w-full z-50 bg-primary transition duration-300 flex items-center justify-center;
+    }
+    .loader {
+        @apply relative w-[120px] h-[90px] mx-auto;
+    }
+    .loader::before {
+        @apply content-[''] absolute bottom-[30px] left-[50px] h-[30px] w-[30px] rounded-full bg-accent;
+        animation: loading-bounce 0.5s ease-in-out infinite alternate;
+    }
+    .loader::after {
+        @apply content-[''] absolute right-0 top-0 h-[7px] w-[45px] rounded-[4px];
+        box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+        animation: loading-step 1s ease-in-out infinite;
+    }
+
+    /* For preloader animation  */ 
+    @keyframes loading-bounce {
+        0% { transform: scale(1, 0.7); }
+        40% { transform: scale(0.8, 1.2); }
+        60% { transform: scale(1, 1); }
+        100% { bottom: 140px; }
+    }
+    @keyframes loading-step {
+        0% {box-shadow: 0 10px 0 rgba(0, 0, 0, 0),0 10px 0 #f2f2f2,-35px 50px 0 #f2f2f2,-70px 90px 0 #f2f2f2;}
+        100% {box-shadow: 0 10px 0 #f2f2f2,-35px 50px 0 #f2f2f2,-70px 90px 0 #f2f2f2,-70px 90px 0 rgba(0, 0, 0, 0);}
+    }
+
+     /* Linear Slide css */
+     .d2c_infinite .swiper-wrapper {
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+    }
+     .d2c_infinite .swiper-slide {
+        width: min-content !important;
+        white-space: nowrap;
+    }
+}
