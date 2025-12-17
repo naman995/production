@@ -44,8 +44,9 @@ const About = () => {
               About <span>us</span>
             </h2>
             <p>
-              Champaran brings you the authentic flavors of Champaran mutton and
-              chicken, inspired by the rich culinary heritage of Bihar.
+              A Signature dish of old Champaran Bihar is an absolute delight for
+              a non vegetarian The specialty of this dish is that it is prepared
+              in an earthen pot is cooked for hours over charcoal
             </p>
             <div>
               <div className="flex items-center gap-3 mb-3">
